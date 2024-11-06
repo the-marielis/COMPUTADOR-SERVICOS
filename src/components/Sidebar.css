@@ -1,0 +1,96 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar .toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar-link {
+  display: flex; /* Adiciona flex para alinhar ícones e texto */
+  align-items: center; /* Centraliza verticalmente o ícone e o texto */
+  gap: 10px; /* Adiciona espaço entre o ícone e o texto */
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: padding 0.3s; /* Anima o padding */
+}
+
+.sidebar-link svg {
+  font-size: 24px; /* Ajusta o tamanho do ícone */
+  min-width: 24px; /* Garante que o ícone mantenha o espaço */
+}
+
+.sidebar.collapsed .sidebar-link span {
+  opacity: 0; /* Oculta o texto no estado colapsado */
+  margin-left: 0; /* Remove o espaçamento ao colapsar */
+}
+
+.sidebar.collapsed .sidebar-link {
+  justify-content: center; /* Centraliza os ícones na versão colapsada */
+}
+
+.dropdown {
+  margin-top: 20px;
+}
+
+.dropdown-title {
+  font-weight: bold;
+  padding: 10px 0;
+  display: block;
+  transition: opacity 0.3s; /* Adiciona transição para opacidade */
+}
+
+.sidebar.collapsed .dropdown-title {
+  opacity: 0; /* Oculta o título do dropdown na versão colapsada */
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.sidebar.collapsed, .sidebar.collapsed .dropdown-content {
+  padding-left: 0; /* Remove padding ao colapsar */
+  align-items: center; /* Centraliza os itens no dropdown */
+}
+
+/* Ajuste o conteúdo para ocupar a largura completa quando o sidebar está colapsado */
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  flex: 1;
+  background-color: #f4f4f4;
+  transition: margin-left 0.3s ease;
+}
+
+.content.collapsed {
+  margin-left: 60px; /* Ajusta a margem quando a sidebar está colapsada */
+}

@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    text-align: center;
+    padding: 50px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 1.5em;
+  }
+  
