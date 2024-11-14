@@ -42,7 +42,7 @@
 
 /* Estilo geral para formulários */
 .form-container {
-  width: 300px;
+  width: 800px;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -97,6 +97,22 @@
 .signup-link {
   text-align: center;
   margin-top: 10px;
+}
+
+.table-container {
+  overflow-x: auto; /* Adiciona rolagem horizontal caso a tabela exceda a largura */
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%; /* Faz com que a tabela se ajuste ao contêiner */
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
 }
 
 /* Responsividade para ajustar o layout em dispositivos menores */

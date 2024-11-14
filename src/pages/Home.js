@@ -8,14 +8,13 @@ import produto3 from '../images/imagem1.png';
 const Home = () => {
   return (
     <div className="home-container">
-      <h1>Bem-vindo ao nosso sistema de Peças e Serviços de Computadores</h1>
+      <h1>Bem-vindo ao +1 brusinha</h1>
       
       <Carousel />
       
       <div className="description">
         <p>
-          Nosso sistema é voltado para a venda e manutenção de equipamentos de informática, 
-          oferecendo produtos de alta qualidade e serviços especializados para atender todas as suas necessidades tecnológicas.
+        Mais do que roupas, são expressões do seu jeito de ser. Seja +1 inspiração com nossa coleção exclusiva!
         </p>
       </div>
       
