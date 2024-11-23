@@ -7,6 +7,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CategoryIcon from '@mui/icons-material/Category';
+import Logo from '../images/logo.png';
 
 const Sidebar = ({ isCollapsed, onToggle }) => {
   return (
@@ -38,12 +39,19 @@ const Sidebar = ({ isCollapsed, onToggle }) => {
             <ShoppingCartIcon />
             {!isCollapsed && <span>Pedido</span>}
           </Link>
+
         </div>
+
       </div>
 
       <button className="toggle-button" onClick={onToggle}>
         {isCollapsed ? '→' : '←'}
       </button>
+      <div className="sidebar-logo">
+        <img src={Logo} alt="Logo" className="logo" />
+        {!isCollapsed && <h1 className="logo-text">+1 Brusinha</h1>}
+      </div>
+
     </div>
   );
 };

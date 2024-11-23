@@ -1,25 +1,23 @@
 import React from 'react';
+import Sobre from '../images/about.jpg';
+import './Home.css'
 
 const About = () => {
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='Sobre' style={{ padding: '20px' }}>
       <h1>Sobre Nós</h1>
+      <p className='line'>________________________________________________</p>
       <p>
-        Somos uma empresa especializada em peças e serviços para computadores, dedicada a oferecer 
-        soluções de alta qualidade para atender às necessidades de nossos clientes. Com anos de 
-        experiência no setor, contamos com uma ampla variedade de componentes de última geração e 
-        uma equipe de técnicos especializados.
+      Ser casual nunca foi tão autêntico. Aqui na +1 Brusinha, acreditamos que a moda deve ser simples: você usa o que te faz sentir bem. Nossa marca é sobre liberdade, conforto e estilo, com peças que abraçam o dia a dia sem deixar de lado a sua essência. Seja para trabalhar, curtir ou só relaxar, temos a peça certa pra te acompanhar.
       </p>
       <p>
-        Nosso compromisso é garantir que cada cliente receba o melhor atendimento e suporte, desde a 
-        escolha do produto até a instalação e manutenção. Estamos sempre prontos para oferecer as 
-        melhores soluções em tecnologia, com o objetivo de proporcionar uma experiência satisfatória 
-        e eficiente.
+      Vem com a gente transformar o básico no extraordinário, porque ser você mesma é sempre tendência.
       </p>
-      <p>
-        Venha nos visitar e descubra como podemos ajudar a melhorar seu sistema de tecnologia com 
-        peças de qualidade e serviços profissionais.
-      </p>
+      <div className='Sobre'>
+        <img src={Sobre} alt="about" className="about" />
+      </div> 
+
+
     </div>
   );
 };

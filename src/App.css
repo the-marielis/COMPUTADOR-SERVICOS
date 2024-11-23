@@ -8,7 +8,7 @@
 /* Configura o sidebar para ocupar espaço fixo */
 .sidebar {
   width: 200px;
-  background-color: #282c34;
+  background-color: #322201;
   color: white;
   transition: width 0.3s ease;
 }
@@ -30,7 +30,7 @@
 /* Estilo para o conteúdo principal */
 .content {
   flex: 1;
-  padding: 20px;
+  padding: 0px 20px;
   overflow-y: auto;
   transition: margin-left 0.3s ease;
 }

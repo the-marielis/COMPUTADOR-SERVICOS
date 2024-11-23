@@ -1,6 +1,6 @@
 /* Container principal */
 .home-container {
-    padding: 20px;
+    padding: 0px 20px;
     text-align: center;
     color: #333;
   }
@@ -60,8 +60,9 @@
   .footer {
     margin-top: 30px;
     padding: 10px;
-    background-color: #282c34;
+    background-color: #322201;
     color: white;
+    margin-right: -10%;
   }
   
   .footer p {
@@ -69,3 +70,20 @@
     font-size: 0.9em;
   }
   
+.Sobre img {
+  width: 100%;
+}
+
+.Sobre {
+  margin-left: 2%;
+}
+
+.Sobre h1 {
+  color: rgb(211, 197, 4);
+}
+
+.Sobre .line {
+  margin-top: -5%;
+  color: #9e8903;
+  font-size: 20px;
+}

@@ -55,6 +55,36 @@
   justify-content: center; /* Centraliza os ícones na versão colapsada */
 }
 
+.sidebar-logo {
+  margin-top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  width: 40px; /* Ajuste conforme necessário */
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .logo {
+  width: 40px;
+}
+
+.sidebar.collapsed .logo-text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .dropdown {
   margin-top: 20px;
 }
