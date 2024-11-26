@@ -43,14 +43,14 @@ const Sidebar = ({ isCollapsed, onToggle }) => {
         </div>
 
       </div>
-
-      <button className="toggle-button" onClick={onToggle}>
-        {isCollapsed ? '→' : '←'}
-      </button>
       <div className="sidebar-logo">
         <img src={Logo} alt="Logo" className="logo" />
         {!isCollapsed && <h1 className="logo-text">+1 Brusinha</h1>}
       </div>
+
+      <button className="toggle-button" onClick={onToggle}>
+        {isCollapsed ? '→' : '←'}
+      </button>
 
     </div>
   );

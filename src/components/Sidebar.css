@@ -4,7 +4,7 @@
   left: 0;
   height: 100vh;
   width: 200px;
-  background-color: #282c34;
+  background-color: #320d01;
   color: white;
   display: flex;
   flex-direction: column;
@@ -56,17 +56,22 @@
 }
 
 .sidebar-logo {
-  margin-top: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: padding 0.3s;
 
 }
 
 .logo {
   max-width: 100%;
   height: auto;
-  width: 40px; /* Ajuste conforme necessário */
+  width: 20%; /* Ajuste conforme necessário */
   transition: all 0.3s ease-in-out;
 }
 

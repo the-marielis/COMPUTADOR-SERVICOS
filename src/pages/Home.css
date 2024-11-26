@@ -79,11 +79,11 @@
 }
 
 .Sobre h1 {
-  color: rgb(211, 197, 4);
+  color: #320d01;
 }
 
 .Sobre .line {
-  margin-top: -5%;
-  color: #9e8903;
+  margin-top: 1%;
+  color: #320d01;
   font-size: 20px;
 }
