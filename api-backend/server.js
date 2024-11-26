@@ -104,6 +104,47 @@ app.post('/api/clientes', (req, res) => {
   });
 });
 
+// Atualiza cliente
+app.put('/api/clientes/:id', (req, res) => {
+  const clienteId = req.params.id;
+  const { nome, email, telefone, dataNascimento } = req.body;
+  
+  const query = 'UPDATE clientes SET nome = ?, email = ?, telefone = ?, dataNascimento = ? WHERE id = ?';
+  
+  db.query(query, [nome, email, telefone, dataNascimento, clienteId], (err, result) => {
+    if (err) {
+      console.error("Erro ao atualizar cliente:", err);
+      return res.status(500).send({ message: "Erro ao atualizar cliente." });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send({ message: "Cliente não encontrado." });
+    }
+
+    res.status(200).send({ message: "Cliente atualizado com sucesso!" });
+  });
+});
+
+// Exclui cliente
+app.delete('/api/clientes/:id', (req, res) => {
+  const clienteId = req.params.id;
+
+  const query = 'DELETE FROM clientes WHERE id = ?';
+
+  db.query(query, [clienteId], (err, result) => {
+    if (err) {
+      console.error("Erro ao excluir cliente:", err);
+      return res.status(500).send({ message: "Erro ao excluir cliente." });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send({ message: "Cliente não encontrado." });
+    }
+
+    res.status(200).send({ message: "Cliente excluído com sucesso!" });
+  });
+});
+
 
 // Função para carregar clientes com paginação e busca
 app.get('/api/clientes', (req, res) => {
@@ -149,6 +190,48 @@ app.post('/api/produtos', (req, res) => {
     res.status(201).send({ message: 'Produto cadastrado com sucesso!' });
   });
 });
+
+// Atualiza produto
+app.put('/api/produtos/:id', (req, res) => {
+  const produtoId = req.params.id;
+  const { codigo, nome, preco, marca, fornecedor } = req.body;
+
+  const query = 'UPDATE produtos SET codigo = ?, nome = ?, preco = ?, marca = ?, fornecedor = ? WHERE id = ?';
+
+  db.query(query, [codigo, nome, preco, marca, fornecedor, produtoId], (err, result) => {
+    if (err) {
+      console.error("Erro ao atualizar produto:", err);
+      return res.status(500).send({ message: "Erro ao atualizar produto." });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send({ message: "Produto não encontrado." });
+    }
+
+    res.status(200).send({ message: "Produto atualizado com sucesso!" });
+  });
+});
+
+// Exclui produto
+app.delete('/api/produtos/:id', (req, res) => {
+  const produtoId = req.params.id;
+
+  const query = 'DELETE FROM produtos WHERE id = ?';
+
+  db.query(query, [produtoId], (err, result) => {
+    if (err) {
+      console.error("Erro ao excluir produto:", err);
+      return res.status(500).send({ message: "Erro ao excluir produto." });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send({ message: "Produto não encontrado." });
+    }
+
+    res.status(200).send({ message: "Produto excluído com sucesso!" });
+  });
+});
+
 
 // Função para carregar produtos com paginação e busca
 app.get('/api/produtos', (req, res) => {
